@@ -30,19 +30,31 @@ if ($result_produk->num_rows > 0) {
 if (isset($_POST['tambah_keranjang'])) {
     $id_produk = $_POST['ID'];
     $stok = $_POST['jumlah']; // Jumlah yang diinput oleh pengguna
+<<<<<<< HEAD
     $note = $_POST['note']; // Catatan yang diinput oleh pengguna
+=======
+>>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
 
     // Memeriksa apakah produk sudah ada di keranjang
     $sql_check = "SELECT * FROM beli WHERE id_produk='$id_produk' AND id_user='{$_SESSION['ID']}'";
     $result_check = $is_connect->query($sql_check);
 
     if ($result_check->num_rows > 0) {
+<<<<<<< HEAD
         // Jika produk sudah ada, update jumlah dan catatan
         $sql_update = "UPDATE beli SET jumlah_beli = jumlah_beli + $stok, catatan = '$note' WHERE id_produk='$id_produk' AND id_user='{$_SESSION['ID']}'";
         $is_connect->query($sql_update);
     } else {
         // Jika produk belum ada, tambahkan produk ke keranjang
         $sql_insert = "INSERT INTO beli (id_user, id_produk, jumlah_beli, catatan) VALUES ('{$_SESSION['ID']}', '$id_produk', '$stok', '$note')";
+=======
+        // Jika produk sudah ada, update jumlah
+        $sql_update = "UPDATE beli SET jumlah_beli = jumlah_beli + $stok WHERE id_produk='$id_produk' AND id_user='{$_SESSION['ID']}'";
+        $is_connect->query($sql_update);
+    } else {
+        // Jika produk belum ada, tambahkan produk ke keranjang
+        $sql_insert = "INSERT INTO beli (id_user, id_produk, jumlah_beli) VALUES ('{$_SESSION['ID']}', '$id_produk', '$stok')";
+>>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
         $is_connect->query($sql_insert);
     }
 
@@ -55,19 +67,31 @@ if (isset($_POST['tambah_keranjang'])) {
 if (isset($_POST['beli'])) {
     $id_produk = $_POST['ID'];
     $stok = $_POST['jumlah']; // Jumlah yang diinput oleh pengguna
+<<<<<<< HEAD
     $note = $_POST['note']; // Catatan yang diinput oleh pengguna
+=======
+>>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
 
     // Memeriksa apakah produk sudah ada di beli
     $sql_check = "SELECT * FROM beli WHERE id_produk='$id_produk' AND id_user='{$_SESSION['ID']}'";
     $result_check = $is_connect->query($sql_check);
 
     if ($result_check->num_rows > 0) {
+<<<<<<< HEAD
         // Jika produk sudah ada, update jumlah dan catatan
         $sql_update = "UPDATE beli SET jumlah_beli = jumlah_beli + $stok, catatan = '$note' WHERE id_produk='$id_produk' AND id_user='{$_SESSION['ID']}'";
         $is_connect->query($sql_update);
     } else {
         // Jika produk belum ada, tambahkan produk ke beli
         $sql_insert = "INSERT INTO beli (id_user, id_produk, jumlah_beli, catatan) VALUES ('{$_SESSION['ID']}', '$id_produk', '$stok', '$note')";
+=======
+        // Jika produk sudah ada, update jumlah
+        $sql_update = "UPDATE beli SET jumlah_beli = jumlah_beli + $stok WHERE id_produk='$id_produk' AND id_user='{$_SESSION['ID']}'";
+        $is_connect->query($sql_update);
+    } else {
+        // Jika produk belum ada, tambahkan produk ke beli
+        $sql_insert = "INSERT INTO beli (id_user, id_produk, jumlah_beli) VALUES ('{$_SESSION['ID']}', '$id_produk', '$stok')";
+>>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
         $is_connect->query($sql_insert);
     }
 
@@ -167,7 +191,11 @@ $is_connect->close();
                         <form method="post">
                             <input type="hidden" name="ID" value="<?php echo $produk['ID']; ?>">
                             <input type="hidden" name="jumlah" id="jumlah-input" value="1">
+<<<<<<< HEAD
                             <textarea name="note" id="noteInput" placeholder="Tambah catatan"></textarea>
+=======
+                            <textarea id="noteInput" placeholder="Tambah catatan"></textarea>
+>>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
                             <div class="btn-beli">
                                 <button type="submit" name="beli">Beli</button>
                             </div>

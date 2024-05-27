@@ -83,17 +83,29 @@ if (!isset($_SESSION['ID'])) { // !isset > data tidak ada ; null != data
             <div class="menu1-content">
                 <a href="./belanja.php" class="link">
                     <i class='bx bx-bowl-hot'></i>
+<<<<<<< HEAD
                     <p>Belanja</p>
                 </a>
                 <a href="./menu.php" class="link">
                     <i class='bx bx-food-menu'></i>
                     <p>Menu</p>
+=======
+                    <p>Bowl Hot</p>
+                </a>
+                <a href="./menu.php" class="link">
+                    <i class='bx bx-food-menu'></i>
+                    <p>Food Menu</p>
+>>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
                 </a>
                 <a href="#link3" class="link">
                     <i class='bx bx-history'></i>
                     <p>History</p>
                 </a>
+<<<<<<< HEAD
                 <a href=".belanja.php" class="link">
+=======
+                <a href="#link4" class="link">
+>>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
                     <i class='bx bx-search'></i>
                     <p>Search</p>
                 </a>

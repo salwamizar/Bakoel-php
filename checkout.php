@@ -52,6 +52,7 @@ $is_connect->close();
         <div id="form">
             <div class="form-box">
                 <div class="form-content">
+<<<<<<< HEAD
                 <form id="payment-form" method="POST" action="proses_bayar.php">
                     <h1 class="judul">Bayar Pesanan</h1>
                     <p>Cek lagi pesananmu dan pastikan pesananmu sudah sesuai</p>
@@ -126,6 +127,69 @@ $is_connect->close();
 
                     <button type="submit" class="btn-byr">Bayar</button>
                 </form>
+=======
+                    <form id="payment-form" method="POST" action="proses_bayar.php">
+                        <h1 class="judul">Bayar Pesanan</h1>
+                        <p>Cek lagi pesananmu dan pastikan pesananmu sudah sesuai</p>
+                        <div class="table-content">
+                            <table>
+                                <tr>
+                                    <th> </th>
+                                    <th>Nama Produk</th>
+                                    <th>Jumlah</th>
+                                    <th>Harga</th>
+                                    <th> </th>
+                                </tr>
+                                <?php
+                                $total_harga = 0;
+                                if ($result_beli->num_rows > 0) {
+                                    while ($row = $result_beli->fetch_assoc()) {
+                                        $total_harga += $row['harga_produk'] * $row['stok'];
+                                        echo "<tr>
+                                                <td><img src='./img/{$row['gambar']}' alt=''></td>
+                                                <td class='nama'>{$row['nama_produk']}</td>
+                                                <td>{$row['stok']}</td>
+                                                <td>{$row['harga_produk']}</td>
+                                            </tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='5'>Tidak ada produk dalam keranjang</td></tr>";
+                                }
+                                ?>
+                                <tr>
+                                    <td>Total</td>
+                                    <td class="nama"></td>
+                                    <td></td>
+                                    <td><?php echo $total_harga; ?></td>
+                                </tr>
+                            </table>
+                            <div class="note-content">
+                                <div class="note">
+                                    <ul>
+                                        <li>pilihin yang risolnya gede</li>
+                                        <li>bolennya yang masih garing yaaaaaa</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metode-bayar">
+                            <h4>Metode pembayaran</h4>
+                            <div class="bayar-content">
+                                <label for="cash">
+                                    <input type="radio" id="cash" name="metode_pembayaran" value="cash" required>
+                                    Cash
+                                </label>
+                                <label for="cashless">
+                                    <input type="radio" id="cashless" name="metode_pembayaran" value="gopay" required>
+                                    Gopay/cashless
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-byr">Bayar</button>
+                    </form>
+>>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
                 </div>
             </div>
         </div>
