@@ -183,9 +183,9 @@ $is_connect->close();
             </div>
         </div>
 
-        <div id="footer">
+        <!-- <div id="footer">
             <p class="copyright">&copy; 2024 Bakoel. Hak Cipta Dilindungi Undang-Undang.</p>
-        </div>
+        </div> -->
     </div>
 </body>
 <script>
