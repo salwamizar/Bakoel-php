@@ -47,7 +47,6 @@ if (!isset($_SESSION['ID'])) { // !isset > data tidak ada ; null != data
         <div class="btn-logout">
             <button><a href="./logout.php">Logout</a></button>
         </div>
-        <!--<button><a href="./logout.php">Logout</a></button>-->
     </div>
 
     <div id="pesanan">
@@ -68,7 +67,7 @@ if (!isset($_SESSION['ID'])) { // !isset > data tidak ada ; null != data
         <div class="tagline-box">
             <div class="tagline-content">
                 <div class="tagline-text">
-                    <h1>Selamat datang kembali!</h2>
+                    <h1>Selamat datang kembali!</h1>
                     <p>mau ngapain hari ini?</p>
                 </div>
                 <div class="tagline-img">
@@ -83,29 +82,17 @@ if (!isset($_SESSION['ID'])) { // !isset > data tidak ada ; null != data
             <div class="menu1-content">
                 <a href="./belanja.php" class="link">
                     <i class='bx bx-bowl-hot'></i>
-<<<<<<< HEAD
                     <p>Belanja</p>
                 </a>
                 <a href="./menu.php" class="link">
                     <i class='bx bx-food-menu'></i>
                     <p>Menu</p>
-=======
-                    <p>Bowl Hot</p>
-                </a>
-                <a href="./menu.php" class="link">
-                    <i class='bx bx-food-menu'></i>
-                    <p>Food Menu</p>
->>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
                 </a>
                 <a href="#link3" class="link">
                     <i class='bx bx-history'></i>
                     <p>History</p>
                 </a>
-<<<<<<< HEAD
-                <a href=".belanja.php" class="link">
-=======
                 <a href="#link4" class="link">
->>>>>>> 78153d60dd4bc7fb0ac2436ef64b61dff71dc9d8
                     <i class='bx bx-search'></i>
                     <p>Search</p>
                 </a>
@@ -133,7 +120,7 @@ if (!isset($_SESSION['ID'])) { // !isset > data tidak ada ; null != data
                 </div>
             </div>
         </div>
-            <p class="copyright">&copy; 2024 Bakoel. Hak Cipta Dilindungi Undang-Undang.</p>
+        <p class="copyright">&copy; 2024 Bakoel. Hak Cipta Dilindungi Undang-Undang.</p>
     </div>
 </div>
 
@@ -142,17 +129,12 @@ if (!isset($_SESSION['ID'])) { // !isset > data tidak ada ; null != data
 
     menuList.style.maxHeight = "0px";
 
-    function togglemenu(){
-
-        if(menuList.style.maxHeight == "0px")
-            {
-                menuList.style.maxHeight = "130px";
-            }
-        else
-            {
-                menuList.style.maxHeight = "0px";
-            }
-        
+    function togglemenu() {
+        if(menuList.style.maxHeight == "0px") {
+            menuList.style.maxHeight = "130px";
+        } else {
+            menuList.style.maxHeight = "0px";
+        }
     }
 </script>
 
