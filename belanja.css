@@ -223,6 +223,8 @@ tr:last-child td {
     background: linear-gradient(to right, #000000, #3a2d08);
     border-radius: 20px;
     cursor: pointer;
+    text-decoration: none;
+    color: #ffd769;
 }
 
 .btn-table a {
@@ -285,7 +287,7 @@ tr:last-child td {
 
 .tanggal {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
     color: #53717e;
 }
 
@@ -327,6 +329,7 @@ tr:last-child td {
     font-size: 15px;
     border-radius: 10px;
     cursor: pointer;
+    color: #ffd769;
 }
 
 .btn-produk a {
@@ -336,6 +339,7 @@ tr:last-child td {
 
 #footer {
     grid-area: footer;
+    margin-top: auto;
 }
 
 .copyright{
